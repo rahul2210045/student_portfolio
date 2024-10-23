@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 // Primary Colors
-Color primaryColor = HexColor("#3068E0");
-Color secondaryColor = HexColor("#E8F0FC");
+Color primaryColor = HexColor("#DF5532");
+Color secondaryColor = HexColor("#D6D1D5");
 
 // additional Colors
 Color additionalYellow = HexColor("#E24B93");
