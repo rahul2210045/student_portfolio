@@ -35,7 +35,7 @@ class _portfolioPageState extends State<portfolioPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Portfolio'),
+          title: Text('Portfolio',style: TextStyle(fontFamily: 'Roboto'),),
           actions: [
             IconButton(
               icon: Icon(
@@ -107,6 +107,7 @@ class _portfolioPageState extends State<portfolioPage> {
           Text(
             text,
             style: TextStyle(
+              fontFamily: 'Roboto',
               fontSize: 16,
               color:
                   _selectedTabIndex == index ? primaryColor : Colors.grey[800],
@@ -133,14 +134,14 @@ class _portfolioPageState extends State<portfolioPage> {
 class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Saved Page ', style: TextStyle(fontSize: 30)));
+    return Center(child: Text('Saved Page ', style: TextStyle(fontSize: 30,fontFamily:  'Roboto')));
   }
 }
 
 class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Shared Page ', style: TextStyle(fontSize: 30)));
+    return Center(child: Text('Shared Page ', style: TextStyle(fontSize: 30, fontFamily: 'Roboto')));
   }
 }
 
@@ -148,6 +149,6 @@ class Page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Text('Achivement Page ', style: TextStyle(fontSize: 30)));
+        child: Text('Achivement Page ', style: TextStyle(fontSize: 30, fontFamily: 'Roboto')));
   }
 }

@@ -16,7 +16,7 @@ class _inputPageState extends State<inputPage> {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Input Page'),
+        title: Text('Input Page',style: TextStyle(fontFamily: 'Roboto'),),
         actions: [
           IconButton(
             icon: Icon(

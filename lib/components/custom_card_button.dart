@@ -43,7 +43,8 @@ class CustomCardButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: GoogleFonts.dmSans(
+            style: TextStyle(
+              fontFamily: 'Roboto',
               color: textColor,
               fontSize: 18,
             ),

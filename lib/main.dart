@@ -15,12 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent, // Set status bar color to transparent
+      statusBarColor: Colors.white, // Set status bar color to transparent
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Roboto',
+        textTheme: TextTheme(
+          bodyText1: TextStyle(fontFamily: 'Roboto'),
+          bodyText2: TextStyle(fontFamily: 'Roboto'),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

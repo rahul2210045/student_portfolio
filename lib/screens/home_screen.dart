@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:student_portfolio/components/navbar.dart';
 import 'package:student_portfolio/constants/constants.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class homePage extends StatefulWidget {
+  const homePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<homePage> createState() => _homePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Home Page', style: TextStyle(fontFamily: 'Roboto'),),
         actions: [
           IconButton(
             icon: Icon(

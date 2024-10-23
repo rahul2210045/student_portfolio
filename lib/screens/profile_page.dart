@@ -16,7 +16,7 @@ class _profilePageState extends State<profilePage> {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile Page'),
+        title: Text('Profile Page',style: TextStyle(fontFamily: 'Roboto'),),
         actions: [
           IconButton(
             icon: Icon(

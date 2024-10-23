@@ -60,12 +60,12 @@ Widget customCoursesCard(
                   ),
                   Container(
                     constraints: BoxConstraints(
-                      maxWidth:
-                          screenWidth * 0.38, 
+                      maxWidth: screenWidth * 0.38,
                     ),
                     child: Text(
                       textcoursename,
-                      style: GoogleFonts.urbanist(
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
                         color: textColorbold,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -83,14 +83,16 @@ Widget customCoursesCard(
                           children: [
                             Text(
                               textSub,
-                              style: GoogleFonts.urbanist(
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
                                 color: textColorbold,
                                 fontSize: 12,
                               ),
                             ),
                             Text(
                               textSubDescription,
-                              style: GoogleFonts.urbanist(
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
                                 color: textColorbold,
                                 fontSize: 10,
                               ),

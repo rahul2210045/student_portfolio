@@ -34,7 +34,7 @@ class _NavBarState extends State<NavBar> {
       case 0:
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => homePage()),
         );
         break;
       case 1:
@@ -62,33 +62,46 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Container(
       height: 70,
-      color: Colors.white,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            offset: Offset(0, -2),
+          ),
+        ],
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           NavBarItem(
-            icon: Icons.home,
+            iconPath: 'lib/assets/home.png',
             label: 'Home',
             isSelected: _selectedIndex == 0,
             onTap: () => _onNavItemTapped(0),
           ),
           const SizedBox(width: 3),
           NavBarItem(
-            icon: Icons.book,
-            label: 'Courses',
+            iconPath: 'lib/assets/portfolio.png',
+            label: 'Portfolio',
             isSelected: _selectedIndex == 1,
             onTap: () => _onNavItemTapped(1),
           ),
           const SizedBox(width: 3),
           NavBarItem(
-            icon: Icons.person,
-            label: 'Profile',
+            iconPath: 'lib/assets/input.png',
+            label: 'Input',
             isSelected: _selectedIndex == 2,
             onTap: () => _onNavItemTapped(2),
           ),
           const SizedBox(width: 3),
           NavBarItem(
-            icon: Icons.person,
+            iconPath: 'lib/assets/profile.png',
             label: 'Profile',
             isSelected: _selectedIndex == 3,
             onTap: () => _onNavItemTapped(3),
@@ -100,14 +113,14 @@ class _NavBarState extends State<NavBar> {
 }
 
 class NavBarItem extends StatelessWidget {
-  final IconData icon;
+  final String iconPath;
   final String label;
   final bool isSelected;
   final VoidCallback onTap;
 
   const NavBarItem({
     super.key,
-    required this.icon,
+    required this.iconPath,
     required this.label,
     required this.isSelected,
     required this.onTap,
@@ -122,19 +135,22 @@ class NavBarItem extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Icon(
-                icon,
-                size: 40,
-                color: isSelected ? primaryColor : Colors.grey.shade500,
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Image.asset(
+                  iconPath,
+                  height: 30,
+                  color: isSelected ? primaryColor : Colors.grey.shade500,
+                ),
               ),
               if (isSelected)
                 Positioned(
-                  bottom: 0,
+                  bottom: 32,
                   left: 0,
                   right: 0,
                   child: Container(
                     height: 2,
-                    color: primaryColor, 
+                    color: primaryColor,
                   ),
                 ),
             ],
@@ -143,6 +159,7 @@ class NavBarItem extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
+              fontFamily: 'Roboto',
               fontSize: 15,
               color: isSelected ? primaryColor : Colors.grey.shade500,
             ),
