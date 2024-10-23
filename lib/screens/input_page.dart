@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:student_portfolio/components/navbar.dart';
 import 'package:student_portfolio/constants/constants.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class inputPage extends StatefulWidget {
+  const inputPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<inputPage> createState() => _inputPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _inputPageState extends State<inputPage> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Input Page'),
         actions: [
           IconButton(
             icon: Icon(
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: const NavBar(initialIndex: 0),
+      bottomNavigationBar: const NavBar(initialIndex: 2),
     );
   }
 }

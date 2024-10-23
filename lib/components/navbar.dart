@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:student_portfolio/constants/constants.dart';
 import 'package:student_portfolio/screens/home_screen.dart';
+import 'package:student_portfolio/screens/input_page.dart';
+import 'package:student_portfolio/screens/portfolio.dart';
+import 'package:student_portfolio/screens/profile_page.dart';
 
 class NavBar extends StatefulWidget {
   final int initialIndex;
@@ -29,27 +32,27 @@ class _NavBarState extends State<NavBar> {
 
     switch (index) {
       case 0:
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => HomePage()),
         );
         break;
       case 1:
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => portfolioPage()),
         );
         break;
       case 2:
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => inputPage()),
         );
         break;
       case 3:
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => profilePage()),
         );
         break;
     }
@@ -131,7 +134,7 @@ class NavBarItem extends StatelessWidget {
                   right: 0,
                   child: Container(
                     height: 2,
-                    color: primaryColor,  // Line above the icon
+                    color: primaryColor, 
                   ),
                 ),
             ],

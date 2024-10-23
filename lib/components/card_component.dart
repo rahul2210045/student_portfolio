@@ -26,9 +26,7 @@ Widget customCoursesCard(
             Border.all(color: Colors.grey.shade400, style: BorderStyle.solid),
         borderRadius: BorderRadius.circular(10),
       ),
-      // height: screenHeight * 0.21,
       width: screenWidth * 0.9,
-      // onTap: function,
       child: Padding(
         padding: const EdgeInsets.all(0.0),
         child: Row(
@@ -36,7 +34,6 @@ Widget customCoursesCard(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              // height: screenHeight * 0.205,
               height: screenHeight * 0.175,
               width: screenWidth * 0.32,
               decoration: BoxDecoration(
@@ -64,7 +61,7 @@ Widget customCoursesCard(
                   Container(
                     constraints: BoxConstraints(
                       maxWidth:
-                          screenWidth * 0.38, // Set your maximum width here
+                          screenWidth * 0.38, 
                     ),
                     child: Text(
                       textcoursename,
@@ -105,8 +102,8 @@ Widget customCoursesCard(
                         ),
                         CustomCardButton(
                             text: "A",
-                            color: Colors.purple.shade50,
-                            textColor: additionalPinkLight,
+                            color: Colors.white,
+                            textColor: Colors.white,
                             width: 0.16,
                             function: () {}),
                       ]),

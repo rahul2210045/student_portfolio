@@ -31,7 +31,14 @@ class CustomCardButton extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [BoxShadow(color: Colors.grey.shade300)],
           borderRadius: BorderRadius.circular(6),
-          color: color,
+          gradient: LinearGradient(
+            colors: [
+              Colors.orange,
+              Colors.yellow
+            ], // Replace with your desired gradient colors
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
         ),
         child: Center(
           child: Text(
